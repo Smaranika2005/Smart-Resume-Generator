@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Resume Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel=" icon" href="logo.png" type="logo/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #e3f2fd, #ffffff);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1rem;
+      color: #0d47a1;
+    }
+
+    p {
+      font-size: clamp(1rem, 2.5vw, 1.1rem);
+      max-width: 700px;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .start-btn {
+      background-color: #0d47a1;
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .start-btn:hover {
+      background-color: #1565c0;
+    }
+
+   .features {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
+  gap: 1.5rem;
+  max-width: 800px;
+  width: 100%;
+  justify-content: center;
+}
+
+
+    .feature-box {
+      background-color: #f5f5f5;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-box h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.8rem;
+      color: #0d47a1;
+    }
+
+    .feature-box p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    @media (max-width: 480px) {
+      .start-btn {
+        width: 100%;
+        font-size: 1.1rem;
+      }
+
+      .feature-box {
+        padding: 1rem;
+      }
+
+      .feature-box h3 {
+        font-size: 1.1rem;
+      }
+
+      .feature-box p {
+        font-size: 0.9rem;
+      }
+    }
+    @media (max-width: 600px) {
+  .features {
+    grid-template-columns: 1fr; /* 1 column for small screens */
+  }
+}
+
+  </style>
+</head>
+<body>
+  <h1>Smart Resume Generator</h1>
+  <p>Create your professional resume in minutes. Just fill out the form, preview your resume, edit the code, and download your resume as a stylish PDF!</p>
+  <button class="start-btn" onclick="startResume()">Let's Begin →</button>
+
+  <div class="features">
+    <div class="feature-box">
+      <h3>Live Preview</h3>
+      <p>See your resume take shape in real-time as you fill the form.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Code Customization</h3>
+      <p>Edit the HTML structure directly for personalized styling and content.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Clean PDF Export</h3>
+      <p>Download your resume in a professionally styled PDF format.</p>
+    </div>
+    <div class="feature-box">
+      <h3>LaTeX-Inspired Layout</h3>
+      <p>Enjoy an elegant and structured resume design with smart alignment.</p>
+    </div>
+  </div>
+
+  <script>
+    function startResume() {
+      window.location.href = "form.html";
+    }
+  </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,104 @@
+<!-- editor.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Live Resume Editor</title>
+  <link rel="stylesheet" href="preview.css" />
+  <link rel=" icon" href="logo.png" type="logo/png">
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .resume-container {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      background-color: #fff;
+      border-right: 1px solid #ccc;
+    }
+
+    .code-editor {
+      flex: 1;
+      padding: 20px;
+      background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+    }
+
+    textarea#editable-html {
+      flex: 1;
+      font-family: monospace;
+      font-size: 14px;
+      padding: 10px;
+      margin-bottom: 10px;
+      white-space: pre;
+      resize: none;
+      overflow: auto;
+    }
+
+    button#recompile-btn {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #recompile-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#recompile-btn:hover {
+  background-color: #357ABD;
+}
+#download-pdf-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+  display: block;
+}
+
+#download-pdf-btn:hover {
+  background-color: #3E8E41;
+}
+
+
+
+  </style>
+</head>
+
+<body>
+  <!-- 👇 Preview section (left side) -->
+  <div class="resume-container">
+    <div id="resume-preview"><!-- Resume HTML will be injected here --></div>
+    <button id="download-pdf-btn" onclick="downloadResume()">Download PDF</button>
+  </div>
+
+  <!-- 👇 Code editor (right side) -->
+  <div class="code-editor">
+    <textarea id="editable-html"></textarea>
+    <button id="recompile-btn">Recompile</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>
+

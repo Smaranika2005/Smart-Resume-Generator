@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Generator - Form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel=" icon" href="logo.png" type="logo/png">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Resume Generator - Fill Details</h2>
+    <form id="resume-form">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="phone" placeholder="Phone" />
+      <input type="text" id="linkedin" placeholder="LinkedIn URL" />
+      <input type="text" id="github" placeholder="GitHub URL" />
+      <textarea id="skills" placeholder="Skills (comma separated)"></textarea>
+
+      <div class="section-title">About Me</div>
+      <div id="about-container">
+      <textarea id="about" placeholder="Write a short summary about yourself..."></textarea>
+      </div>
+
+      <div class="section-title">Education</div>
+      <div id="education-container">
+      <textarea class="education" placeholder="Institute Name||Course||Marks||Location||Duration"></textarea>
+      </div>
+      <div class="add-btn-wrapper">
+      <button type="button" class="add-btn" onclick="addField('education')">+</button>
+      </div>
+
+      <div class="section-title">Projects</div>
+      <div id="projects-container">
+      <textarea class="projects" placeholder="Project Title||Brief Description"></textarea>
+      </div>
+      <div class="add-btn-wrapper">
+      <button type="button" class="add-btn" onclick="addField('projects')">+</button>
+      </div>
+
+      <div class="section-title">Certifications</div>
+      <div id="certification-container">
+        <textarea class="certification" placeholder="Course Title||Platform||Certificate URL"></textarea>
+      </div>
+      <div class="add-btn-wrapper">
+  <button type="button" class="add-btn" onclick="addField('certification')">+</button>
+</div>
+
+      <div class="section-title">Hobbies</div>
+      <div id="hobbies-container">
+        <textarea class="hobbies" placeholder="Hobbies"></textarea>
+      </div>
+      <div class="add-btn-wrapper">
+  <button type="button" class="add-btn" onclick="addField('hobbies')">+</button>
+</div>
+
+      <div class="generate-btn-wrapper">
+  <button type="button" class="generate-btn" onclick="saveAndRedirect()">Generate Resume</button>
+</div>
+
+    </form>
+  </div>
+
+  <script src="form.js"></script>
+</body>
+</html>
+
+

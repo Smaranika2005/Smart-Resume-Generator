@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Preview</title>
+  <link rel="stylesheet" href="preview.css" />
+  <link rel=" icon" href="logo.png" type="logo/png">
+</head>
+<body>
+  <div class="preview-container">
+    <div id="resume-preview" class="resume-template"></div>
+
+    <div class="button-row">
+    <button id="download-pdf-btn" onclick="downloadResume()">Download PDF</button>
+    <a href="editor.html"><button id="edit-code-btn">Edit Code</button></a>
+    </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  <script src="preview.js"></script>
+</body>
+</html>
+
